@@ -1,0 +1,131 @@
+@media only screen and (min-width: 1000px)
+{
+:root
+{
+    font-size: 1.25vw; 
+}
+}
+*
+{
+    margin: 0 auto;
+    font-family:"Roboto";
+    color:white;
+}
+main
+{
+    background:linear-gradient(rgb(29, 29, 29),rgb(34, 34, 34));
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.calculator
+{
+    width:32.943vw;
+    height:36.603vw;
+    display:flex;
+    flex-direction: column;
+    padding:1.464vw;
+    background:rgb(46, 46, 46);
+    border-radius:5% 5% 2.5% 2.5%;
+    border:3px solid black;
+}
+.screen
+{
+    width:100%;
+    height:6.955vw;
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    font-size:5.857vw;
+    background:rgb(24, 24, 24);
+    border:0.1px solid white;
+    box-sizing: border-box;
+    font-family:"Fira Code";
+    .padding
+    {
+        padding:0.732vw;
+    }
+}
+.keys
+{
+    width:32.943vw;
+    height:29.283vw;
+    display:grid;
+    grid-template-areas:
+    "clear clear divide multiply"
+    "seven eight nine subtract"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+}
+.keypad
+{
+    background: rgb(31, 160, 160);
+    border:0.1px solid white;
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    user-select:none;
+    justify-content: center;
+    &:hover
+    {
+        background: rgb(28, 141, 141);
+        color:rgb(61, 61, 61);
+    }
+}
+.name
+{
+    position:fixed;
+    bottom:1vw;
+    color: whitesmoke;
+    font-size: 20px;
+    text-decoration:none;
+    i
+    {
+        display: inline-block;
+        margin-right:10px;
+        color:whitesmoke;
+    }
+}
+
+// The time has finally come, i use loop inside Sass lmao
+// https://sass-lang.com/documentation/at-rules/control/each
+
+$pads: clear,divide,multiply,subtract,add,equals,decimal,zero,one,two,three,four,five,six,seven,eight,nine;
+
+@each $pad in $pads {
+    ##{$pad}
+    {
+        grid-area:$pad;
+    }
+}
+
+#clear
+{
+    background:salmon;
+    &:hover
+    {
+        background:rgb(233, 119, 106);
+    }
+}
+#equals
+{
+    background: #fac372;
+    &:hover
+    {
+        background: #e2b269;
+    }
+}
+
+#divide, #multiply, #subtract, #add
+{
+    background: #8d72fa;
+    &:hover
+    {
+        background: #8067e2;
+    }
+}

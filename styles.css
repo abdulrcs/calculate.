@@ -1,0 +1,246 @@
+@media only screen and (min-width: 1000px) {
+  :root {
+    font-size: 1.25vw;
+  }
+}
+
+* {
+  margin: 0 auto;
+  font-family: "Roboto";
+  color: white;
+}
+
+main {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1d1d1d), to(#222222));
+  background: linear-gradient(#1d1d1d, #222222);
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calculator {
+  width: 32.943vw;
+  height: 36.603vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.464vw;
+  background: #2e2e2e;
+  border-radius: 5% 5% 2.5% 2.5%;
+  border: 3px solid black;
+}
+
+.screen {
+  width: 100%;
+  height: 6.955vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 5.857vw;
+  background: #181818;
+  border: 0.1px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Fira Code";
+}
+
+.screen .padding {
+  padding: 0.732vw;
+}
+
+.keys {
+  width: 32.943vw;
+  height: 29.283vw;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "clear clear divide multiply" "seven eight nine subtract" "four five six add" "one two three equals" "zero zero decimal equals";
+}
+
+.keypad {
+  background: #1fa0a0;
+  border: 0.1px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.keypad:hover {
+  background: #1c8d8d;
+  color: #3d3d3d;
+}
+
+.name {
+  position: fixed;
+  bottom: 1vw;
+  color: whitesmoke;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.name i {
+  display: inline-block;
+  margin-right: 10px;
+  color: whitesmoke;
+}
+
+#clear {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: clear;
+}
+
+#divide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: divide;
+}
+
+#multiply {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: multiply;
+}
+
+#subtract {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: subtract;
+}
+
+#add {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: add;
+}
+
+#equals {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: equals;
+}
+
+#decimal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: decimal;
+}
+
+#zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: zero;
+}
+
+#one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+#two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+#three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+#four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+#five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+#six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+#seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+#eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+#nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+#clear {
+  background: salmon;
+}
+
+#clear:hover {
+  background: #e9776a;
+}
+
+#equals {
+  background: #fac372;
+}
+
+#equals:hover {
+  background: #e2b269;
+}
+
+#divide, #multiply, #subtract, #add {
+  background: #8d72fa;
+}
+
+#divide:hover, #multiply:hover, #subtract:hover, #add:hover {
+  background: #8067e2;
+}
+/*# sourceMappingURL=styles.css.map */
